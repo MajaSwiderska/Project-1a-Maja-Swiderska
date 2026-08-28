@@ -7,4 +7,5 @@ object Main:
   def main(args: Array[String]): Unit =
     println(boundingBox(simpleLocation))
     println(Rectangle(2, 3) == Rectangle(2, 3))
+    println(Rectangle(22, 33) == Rectangle(23, 34))
 end Main
