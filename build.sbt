@@ -1,9 +1,8 @@
 name := "shapes-oo-scala"
 
-version := "0.4"
+version := "0.5"
 
 libraryDependencies ++= Seq(
-  "org.creativescala" %% "doodle"     % "0.34.0",
-  "org.scalatest"     %% "scalatest"  % "3.2.20"  % Test,
-  "org.scalacheck"    %% "scalacheck" % "1.20.0"  % Test
+  "org.creativescala"    %% "doodle"            % "0.34.0",
+  "com.github.sbt.junit" %  "jupiter-interface" % JupiterKeys.jupiterVersion.value % Test
 )
