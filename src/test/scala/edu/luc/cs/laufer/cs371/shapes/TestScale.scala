@@ -19,31 +19,32 @@ class TestScale:
     @Test
     def testBasicGroup(): Unit = assertEquals(Group(Ellipse(100, 60), Rectangle(40, 80)), scale(2, basicGroup))
 
-    @Test
-    def testSimpleGroup(): Unit =
-        assertEquals(
-            Group(
-                Location(400, 200, Ellipse(100, 60)),
-                Location(800, 600, Rectangle(200, 100))
-            ),
-            scale(2, simpleGroup)
-        )
     
-    @Test
-    def testComplexGroup(): Unit =
-        assertEquals(
-            Location(100, 200,
-                Group(
-                    Ellipse(40, 80),
-                    Location(300, 100,
-                    Group(
-                        Rectangle(100, 60),
-                        Rectangle(600, 120),
-                        Location(200, 400, Ellipse(100, 60))
-                    )),
-                Rectangle((200, 400)
-                )),
-            scale(2, complexGroup)
-        )
+  @Test
+  def testSimpleGroup(): Unit =
+    assertEquals(
+      Group(
+        Location(400, 200, Ellipse(100, 60)),
+        Location(800, 600, Rectangle(200, 100))
+      ),
+      scale(2, simpleGroup)
+    )
+    
+  @Test
+  def testComplexGroup(): Unit =
+    assertEquals(
+      Location(100, 200,
+        Group(
+          Ellipse(40, 80),
+          Location(300, 100,
+            Group(
+              Rectangle(100, 60),
+              Rectangle(600, 120),
+              Location(200, 400, Ellipse(100, 60))
+            )),
+          Rectangle(200, 400)
+        )),
+      scale(2, complexGroup)
+    )
 
 end TestScale
