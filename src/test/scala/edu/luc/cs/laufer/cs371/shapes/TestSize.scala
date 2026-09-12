@@ -7,7 +7,7 @@ import TestFixtures.*
 
 class TestSize:
     @Test
-    def testSimple Rectangle(): Unit = assertEquals(1, size(simpleRectangle))
+    def testSimpleRectangle(): Unit = assertEquals(1, size(simpleRectangle))
 
     @Test
     def testSimpleEllipse(): Unit = assertEquals(1, size(simpleEllipse))
