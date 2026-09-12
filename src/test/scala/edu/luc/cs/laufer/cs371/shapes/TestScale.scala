@@ -3,23 +3,27 @@ package edu.luc.cs.laufer.cs371.shapes
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.Assertions.assertEquals
 
-import TestFixtures.* 
-import Shape.* 
+import TestFixtures.*
+import Shape.*
 
 class TestScale:
-    @Test
-    def testSimpleRectangle(): Unit = assertEquals(Rectangle(160, 240), scale(2, simpleRectangle))
 
-    @Test
-    def testSimpleEllipse(): Unit = assertEquals(Ellipse(100, 60), scale(2, simpleEllipse))
+  @Test
+  def testSimpleRectangle(): Unit =
+    assertEquals(Rectangle(160, 240), scale(2, simpleRectangle))
 
-    @Test
-    def testSimpleLocation(): Unit = assertEquals(Location(140, 60, Rectangle(160, 240)), scale(2, simpleLocation))
+  @Test
+  def testSimpleEllipse(): Unit =
+    assertEquals(Ellipse(100, 60), scale(2, simpleEllipse))
 
-    @Test
-    def testBasicGroup(): Unit = assertEquals(Group(Ellipse(100, 60), Rectangle(40, 80)), scale(2, basicGroup))
+  @Test
+  def testSimpleLocation(): Unit =
+    assertEquals(Location(140, 60, Rectangle(160, 240)), scale(2, simpleLocation))
 
-    
+  @Test
+  def testBasicGroup(): Unit =
+    assertEquals(Group(Ellipse(100, 60), Rectangle(40, 80)), scale(2, basicGroup))
+
   @Test
   def testSimpleGroup(): Unit =
     assertEquals(
@@ -29,7 +33,7 @@ class TestScale:
       ),
       scale(2, simpleGroup)
     )
-    
+
   @Test
   def testComplexGroup(): Unit =
     assertEquals(
