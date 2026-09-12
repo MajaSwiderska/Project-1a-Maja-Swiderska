@@ -1,4 +1,4 @@
-package edu.luc.cs.laufer.cs371.shaoes
+package edu.luc.cs.laufer.cs371.shapes
 
 import Shape.* 
 
