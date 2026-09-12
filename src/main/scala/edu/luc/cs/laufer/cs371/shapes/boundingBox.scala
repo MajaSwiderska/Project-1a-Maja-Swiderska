@@ -3,9 +3,14 @@ package edu.luc.cs.laufer.cs371.shapes
 // TODO: implement this behavior
 
 import Shape.*
+import com.typesafe.scalalogging.Logger
 
 object boundingBox:
-  def apply(s: Shape): Location = s match
+  private val logger = Logger(getClass)
+
+  def apply(s: Shape): Location =
+    logger.debug(s"boundingBox input: $s")
+    s match
     case Rectangle(w, h) => Location(0, 0, Rectangle(w, h))
     case Ellipse(w, h) => Location(-w, -h, Rectangle(2 * w, 2 * h))
     case Location(x, y, shape) =>
