@@ -36,4 +36,9 @@ class TestShapeValidity:
     assertDoesNotThrow(() => Shape.rectangle(0, 0))
     assertDoesNotThrow(() => Shape.ellipse(0, 0))
 
+  @Test
+  def testDirectConstructorRejectsNegative(): Unit =
+    assertThrows(classOf[IllegalArgumentException], () => Shape.Rectangle(-1, 20))
+    assertThrows(classOf[IllegalArgumentException], () => Shape.Ellipse(-1, 20))
+
 end TestShapeValidity
