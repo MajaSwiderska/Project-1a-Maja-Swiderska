@@ -17,9 +17,9 @@ object Shape:
   def rectangle(width: Int, height: Int): Shape =
     require(width >= 0, s"width must be >= 0, got $width")
     require(height >= 0, s"height must be >= 0, got $height")
-    new Shape.Rectangle(width, height)
+    new Rectangle(width, height)
 
   def ellipse(width: Int, height: Int): Shape =
     require(width >= 0, s"width must be >= 0, got $width")
     require(height >= 0, s"height must be >= 0, got $height")
-    new Shape.Ellipse(width, height)
+    new Ellipse(width, height)
