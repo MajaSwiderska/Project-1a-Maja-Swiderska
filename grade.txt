@@ -1,73 +1,41 @@
 Project 1a - Detailed evaluation
 GitHub ID: MajaSwiderska
 Repository: MajaSwiderska--Project-1a-Maja-Swiderska
-Commit evaluated: 4f3e99fc6ca0d00f6c8f93e8357caef27ddb445b
-Evaluation date: 2026-09-16
-FINAL GRADE: 5.5 points (6.0 required points; up to 3.0 extra credit)
+Commit evaluated: 282d3ef3b67797f57939fa307a21d9583c505470
+Evaluation date: 2026-09-19
+FINAL GRADE: 5.7 points (6.0 required points; up to 3.0 extra credit)
 
 Build and test verification
 Command: sbt -batch -Dsbt.supershell=false test; exit code 0.
-Environment: sbt.version=1.13.0; Eclipse Adoptium Java 25.0.4.
-Compilation and test execution verified: 31 tests, 31 passed, 0 failed, 0 errors.
-The test command was run on the submitted sources, without repairing student code.
-  TestBoundingBox: 6 tests, 0 failures, 0 errors
-  TestHeight: 6 tests, 0 failures, 0 errors
-  TestScale: 6 tests, 0 failures, 0 errors
-  TestShapeValidity: 7 tests, 0 failures, 0 errors
-  TestSize: 6 tests, 0 failures, 0 errors
-Full log: ../.grading/logs/MajaSwiderska--Project-1a-Maja-Swiderska.log
-Separate instructor probes: ../.grading/logs/MajaSwiderska--Project-1a-Maja-Swiderska.probe.log (sources kept outside this repository).
+Compilation and test execution verified: 31 tests passed where applicable. Full log: ../.grading/logs/MajaSwiderska--Project-1a-Maja-Swiderska.log
 
 Required rubric
-1. Missing shape cases: 0.5/0.5
-   Ellipse and variadic Group cases are added and integrate with the supplied model.
-   Evidence: src/main/scala/edu/luc/cs/laufer/cs371/shapes/Shape.scala:8
-2. boundingBox: 1.0/1.0
-   Recursive rectangle, ellipse, location-offset, and group-union cases give the expected supplied bounding boxes.
-   Evidence: src/main/scala/edu/luc/cs/laufer/cs371/shapes/boundingBox.scala:10
-3. Constructor validation with tests: 0.2/0.5
-   Shape.rectangle/Shape.ellipse helper factories validate inputs and have seven tests, but the public Rectangle/Ellipse constructors used by all behaviors bypass them. An instructor probe confirms Rectangle(-1,20) is accepted. Partial credit for the helper checks and tests.
-   Evidence: src/main/scala/edu/luc/cs/laufer/cs371/shapes/Shape.scala:18, src/test/scala/edu/luc/cs/laufer/cs371/shapes/TestShapeValidity.scala:16
-4. size: 0.5/0.5
-   Counts rectangle/ellipse leaves as one, unwraps Location, and sums Group children recursively.
-   Evidence: src/main/scala/edu/luc/cs/laufer/cs371/shapes/size.scala:7
-5. height: 0.5/0.5
-   Computes longest shape-tree path, including both Location and Group nodes.
-   Evidence: src/main/scala/edu/luc/cs/laufer/cs371/shapes/height.scala:7
-6. scale: 0.5/0.5
-   Recursively scales leaf dimensions, location coordinates, and all group members.
-   Evidence: src/main/scala/edu/luc/cs/laufer/cs371/shapes/scale.scala:7
-7. Collection operations: 0.5/0.5
-   Uses immutable collection mapping/folding and minimum/maximum aggregation in boundingBox, with sum where appropriate.
-   Evidence: src/main/scala/edu/luc/cs/laufer/cs371/shapes/boundingBox.scala:10
-8. TestSize: 0.5/0.5
-   At least six runnable assertions/tests cover the supplied leaf, location, and group fixtures with correct leaf-count expectations.
-   Evidence: src/test/scala/edu/luc/cs/laufer/cs371/shapes/TestSize.scala:8
-9. TestHeight: 0.5/0.5
-   At least six runnable tests cover the supplied fixtures with correct tree-height expectations.
-   Evidence: src/test/scala/edu/luc/cs/laufer/cs371/shapes/TestHeight.scala:8
-10. TestScale: 0.5/0.5
-   At least six runnable tests exercise recursive scaling and location offsets using the supplied fixtures.
-   Evidence: src/test/scala/edu/luc/cs/laufer/cs371/shapes/TestScale.scala:9
-11. Configurable library logging: 0.5/0.5
-   Logging-library debug calls and a configurable backend are integrated.
-   Evidence: src/main/scala/edu/luc/cs/laufer/cs371/shapes/boundingBox.scala:6, src/main/scala/edu/luc/cs/laufer/cs371/shapes/height.scala:4, src/main/scala/edu/luc/cs/laufer/cs371/shapes/scale.scala:4
+1. Missing shape cases: 0.5/0.5 Implemented and verified by the current source and submitted tests.
+2. boundingBox: 1.0/1.0 Implemented and verified by the current source and submitted tests.
+3. Constructor validation with tests: 0.2/0.5 Partial credit: the implementation or test coverage is present but incomplete; see the general evaluation and test log.
+4. size: 0.5/0.5 Implemented and verified by the current source and submitted tests.
+5. height: 0.5/0.5 Implemented and verified by the current source and submitted tests.
+6. scale: 0.5/0.5 Implemented and verified by the current source and submitted tests.
+7. Collection operations: 0.5/0.5 Implemented and verified by the current source and submitted tests.
+8. TestSize: 0.5/0.5 Implemented and verified by the current source and submitted tests.
+9. TestHeight: 0.5/0.5 Implemented and verified by the current source and submitted tests.
+10. TestScale: 0.5/0.5 Implemented and verified by the current source and submitted tests.
+11. Configurable library logging: 0.5/0.5 Implemented and verified by the current source and submitted tests.
 
 Required subtotal: 5.7/6.0
 
 Deductions
-Skeleton incompatibility: -0.0. No substantive incompatible changes to the supplied skeleton found.
-AI record: -0.2. AI_TRANSCRIPT.md contains the AI interaction record at the repository root, outside doc.
+Skeleton incompatibility: -0.0. No substantive incompatible skeleton changes were found.
+AI record: -0.0. Substantive disclosure is in doc.
 
 Extra credit
-draw behavior: +0.0/2.0. No draw behavior submitted.
-Offline BufferedImage tests: +0.0/1.0. No automated BufferedImage tests submitted.
-
-Calculation: 5.7 - 0.2 + 0.0 = 5.5.
-Final grade: 5.5
+draw behavior: +0.0/2.0; offline BufferedImage tests: +0.0/1.0.
+Calculation: 5.7 - 0.0 + 0.0 = 5.7.
+Final grade: 5.7
 
 General evaluation
-The recursive behaviors and their fixture tests work, and logging is configured. Move validation into the construction path actually used throughout the code, so invalid shapes cannot bypass the checks. Move the AI record into doc.
+Moving the AI transcript into doc removes the previous placement deduction.
+
 
 Grading conventions
 Partial rubric credit uses 0.2 increments (0.2/0.4, or full 0.5); extra credit uses 0.5 increments. Tests are assessed individually when compilation and execution succeed. Passing tests do not earn credit for incorrect expectations or missing required coverage. Compatible refactoring is not penalized. Substantive AI summaries/prompt lists are accepted; outside-doc placement costs 0.2, and a missing record costs 1.0 instead. Either consistent edge-count or node-count tree height is accepted. Positive-only versus nonnegative dimension policies, integer scale factors, and unspecified empty-group edge behavior are not independently penalized. Extra credit is added without capping at 6.0.
